@@ -21,6 +21,13 @@ func main() {
 	r.GET("/litters/:id", controllers.GetLitter)
 	r.PUT("/litters/:id", controllers.UpdateLitter)
 	r.DELETE("/litters/:id", controllers.DeleteLitter)
+
+	r.POST("/gifts", controllers.GiftCreate)
+	r.GET("/gifts", controllers.GetGifts)
+	r.GET("/gifts/:id", controllers.GetGift)
+	r.PUT("/gifts/:id", controllers.UpdateGift)
+	r.DELETE("gifts/:id", controllers.DeleteGift)
+
 	r.POST("/signup", controllers.Signup)
 	r.POST("/login", controllers.Login)
 	r.GET("/validate", middleware.RequireAuth, controllers.Validate)

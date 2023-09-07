@@ -22,6 +22,7 @@ func LitterCreate(c *gin.Context) {
 		c.Status(400)
 		return
 	}
+
 	c.JSON(200, gin.H{
 		"litters": litter,
 	})
